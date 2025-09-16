@@ -8,6 +8,5 @@
 
 <template>
   <p data-test="content">Beware of scams</p>
-
-  <button @click=clickAndSetLanguageBeforeRedirect data-test="english-button">English</button>
+  <NuxtLink data-test="english-button" to="/enquiry/landingpage">English</NuxtLink>
 </template>
