@@ -7,5 +7,6 @@ describe('LandingPage', () => {
         const wrapper = mount(LandingPage)
         const content = wrapper.get('[data-test="content"]')
         expect(content.text()).toEqual("This is the landing page in English")
+
     })
 })
