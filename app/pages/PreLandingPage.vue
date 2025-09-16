@@ -9,4 +9,6 @@
 <template>
   <p data-test="content">Beware of scams</p>
   <NuxtLink data-test="english-button" to="/enquiry/landingpage">English</NuxtLink>
+
+  <NuxtLink data-test="chinese-button" to="/enquiry/landingpage">Chinese</NuxtLink>
 </template>

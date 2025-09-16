@@ -12,18 +12,27 @@ describe('PreLandingPage', () => {
     })
 
     it('should show button for change language to English and have correct target link', async () => {
-
-
-
         const wrapper = await mountSuspended(PreLandingPage, {
 
         })
-        const link = wrapper.findComponent(NuxtLink)
+        const link = wrapper.get('[data-test="english-button"]')
         // Checking nuxt link text rendered
         expect(link.text()).toBe('English')
-        // checking link target is correct
-        expect(link.props().to).toBe('/enquiry/landingpage')
+        const component = link.getComponent(NuxtLink)
+        // checking link target is correct?
+        expect(component.props().to).toBe('/enquiry/landingpage')
+    })
 
+    it('should show button for change language to Chinese and have correct target link', async () => {
+        const wrapper = await mountSuspended(PreLandingPage, {
 
+        })
+        const link = wrapper.get('[data-test="chinese-button"]')
+
+        // Checking nuxt link text rendered
+        expect(link.text()).toBe('Chinese')
+        const component = link.getComponent(NuxtLink)
+        // checking link target is correct?
+        expect(component.props().to).toBe('/enquiry/landingpage')
     })
 })
